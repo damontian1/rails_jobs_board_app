@@ -1,8 +1,10 @@
 %h1= @job.title
 %p= @job.description
 %p= @job.company
-%p= @job.url
+%button.btn.btn-default.btn-lg= link_to "Apply for Job", @job.url
 
-= link_to "Home", root_path
-= link_to "Edit", edit_job_path(@job)
-= link_to "Delete", job_path(@job), method: :delete, data: {confirm: "are you sure?"}
+%hr
+%div
+	= link_to "Home", root_path
+	= link_to "Edit", edit_job_path(@job)
+	= link_to "Delete", job_path(@job), method: :delete, data: {confirm: "are you sure?"}
